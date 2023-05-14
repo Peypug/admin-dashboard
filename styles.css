@@ -31,6 +31,10 @@
   background-color: blueviolet;
   grid-column: 1 / 2;
   grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
 .relevent {
@@ -97,10 +101,48 @@
 .search-bar>input {
   width: 75%;
 }
+/* Sidebar sub-sections */
+.sidebar>div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 30px;
+ 
+}
+.sub-pages>div,
+.page-settings>div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.page-settings {
+  margin-right: 50px;
+}
+.dashboard>h1 {
+  font-size: 34px;
+}
+
+.sidebar .subpage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.sidebar .dashboard>span {
+  font-size: 48px;
+
+}
+
 /* Global element styles */
 button {
   height: auto;
   width: 100px;
+}
+
+p {
+  margin: 0px;
 }
 
 /* Icon styles */
