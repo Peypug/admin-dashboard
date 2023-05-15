@@ -1,4 +1,7 @@
 /* Full page styles */
+:root {
+  background-color: rgb(0, 255, 13);
+}
 .page {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -16,8 +19,6 @@
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-items: center;
-  padding-top: 30px;
-  padding-right: 30px;
 }
 
 .projects {
@@ -43,6 +44,15 @@
   grid-row: 2 / 3;
 }
 
+/* .page,
+.projects,
+.relevent,
+.sidebar,
+.header,
+:root {
+  background-color: white;
+} */
+
 /* Header sub-sections */
 .profile-image {
   width: auto;
@@ -58,8 +68,11 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 50px;
   align-items: center;
+  width: 100%;
+
 }
 .profile-text,
 .profile-text h1,
@@ -83,20 +96,24 @@
 
 .buttons {
   display: flex;
-  justify-content: space-between;
-  width: 100%
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
 }
 
 .buttons>button {
-  width: 150px;
-  height: 50px;
-  border-radius: 60%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
 }
 .search-bar {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  margin-left: 50px;
 }
 .search-bar>input {
   width: 75%;
@@ -158,29 +175,35 @@
 .relevent img {
   align-items: center;
 }
-
+.announcements>h2,
+.trending>h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 .announcements-grid {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 .announcements-grid div {
   background-color: orange;
+  padding: 5px;
+  border-radius: 5px;
 }
 .trending-grid div {
   display: flex;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; */
-  background-color: orange;
   flex-wrap: wrap;
   width: 100%;
+  padding: 5px;
+  gap: 5px;
 }
 .trending-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  background-color: orange;
+  border-radius: 5%;
+  padding: 5px
 }
 
 /* Projects sub-sections */
@@ -189,7 +212,17 @@
   word-wrap: break-word;
   padding: 30px;
 }
+.card h2 {
+  text-align: center;
+}
 
+.card-images {
+  text-align: end;
+}
+.projects>h2 {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
@@ -200,13 +233,15 @@
 
 
 /* Global element styles */
-button {
-  height: auto;
-  width: 100px;
-}
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0px;
+  padding: 0px;
 }
 
 /* Icon styles */
